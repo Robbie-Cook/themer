@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="261px" height="144px" viewBox="0 0 261 144" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>Page 1</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="React-Library" transform="translate(-126.000000, -72.000000)">
+            <text id="React-Library-Exampl" font-family="Helvetica-Bold, Helvetica" font-size="24" font-weight="bold" line-spacing="28" letter-spacing="0.133333335" fill="#666666">
+                <tspan x="119" y="195">React Library Example</tspan>
+            </text>
+            <text id="(with-Typescript)" font-family="Helvetica-LightOblique, Helvetica" font-size="8" font-style="italic" font-weight="300" letter-spacing="0.0444444451" fill="#666666">
+                <tspan x="227" y="214">(with Typescript)</tspan>
+            </text>
+            <path d="" id="Path" stroke="#979797"></path>
+            <g id="Link" transform="translate(221.000000, 117.097509)" stroke="#71A066" stroke-width="17">
+                <path d="M0,10.1313593 C1.52179594e-15,22.5577662 10.0735931,32.6313593 22.5,32.6313593 L99.6180346,32.6313593 C112.044441,32.6313593 122.118035,22.5577662 122.118035,10.1313593 C122.118035,-2.29504757 112.044441,-12.3686407 99.6180346,-12.3686407 L22.5,-12.3686407 C10.0735931,-12.3686407 -1.52179594e-15,-2.29504757 0,10.1313593 Z" id="Path-2"></path>
+            </g>
+            <g id="Link" opacity="0.763090588" transform="translate(156.000000, 93.000000)" stroke="#71A066" stroke-width="17">
+                <path d="M0,10.1313593 C1.52179594e-15,22.5577662 10.0735931,32.6313593 22.5,32.6313593 L99.6180346,32.6313593 C112.044441,32.6313593 122.118035,22.5577662 122.118035,10.1313593 C122.118035,-2.29504757 112.044441,-12.3686407 99.6180346,-12.3686407 L22.5,-12.3686407 C10.0735931,-12.3686407 -1.52179594e-15,-2.29504757 0,10.1313593 Z" id="Path-2"></path>
+            </g>
+        </g>
+    </g>
+</svg>
