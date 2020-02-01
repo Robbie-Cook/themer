@@ -1,7 +1,5 @@
 <p align="center">
-  <a href="https://yarnpkg.com/">
-    <img alt="Yarn" src="banner.svg" width="400">
-  </a>
+  <img alt="Banner" src="banner.svg" width="400">
 </p>
 
 ---

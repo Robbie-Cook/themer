@@ -1,15 +1,13 @@
-import { ThemeContext } from "./theme/theme-context";
 import * as React from "react";
 
-class ThemedButton extends React.Component {
+
+interface Props {
+
+}
+class ThemedButton extends React.Component<Props> {
   render() {
-    let props = this.props;
-    let theme = this.context;
-    return (
-        <button {...props} style={{ backgroundColor: theme.background }} />
-    );
+    return <h1>Hello!</h1>
   }
 }
-ThemedButton.contextType = ThemeContext;
 
 export default ThemedButton;
