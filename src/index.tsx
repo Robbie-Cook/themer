@@ -1,4 +1,3 @@
-import Foo from './Foo';
-import { ThemeContext } from './theme/theme-context';
+import ThemeHelper from './theme/ThemeHelper';
 
-export { Foo, ThemeContext };
+export { ThemeHelper };
