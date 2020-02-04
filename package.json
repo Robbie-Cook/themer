@@ -1,7 +1,7 @@
 {
-  "name": "@robbie-cook/react-library-boilerplate",
+  "name": "@robbie-cook/themer",
   "version": "1.0.0",
-  "description": "Example TypeScript React component library",
+  "description": "Example TypeScript React component themer",
   "files": [
     "dist"
   ],

@@ -1,3 +1,3 @@
-import ThemeHelper from './theme/ThemeHelper';
+import ThemeContext from './theme/ThemeContext';
 
-export { ThemeHelper };
+export { ThemeContext };

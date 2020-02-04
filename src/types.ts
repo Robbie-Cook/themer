@@ -1,71 +1,55 @@
 /**
- * File for holding generic types for this project
+ * File for holding generic types for this project.
+ * See types.ts in Typescript compiler codes
  */
+
+/**
+ * Theming definitions.
+ *
+ * This code holds the structure for how themer works.
+ *
+ */
+export interface ComponentStyles extends FontStyles, DisplayStyles {}
+
+/**
+ * Display styles e.g. padding, margin, positioning
+ */
+export interface DisplayStyles {
+  margin?: string;
+  padding?: string;
+  position?: string;
+  left?: string;
+  right?: string;
+  border?: string;
+}
 
 /**
  * Mimics CSS font definition e.g. 'sans serif', 'Monospace'
  */
 type FontType = Array<string> | string;
 
-/** 
+/**
  * Styling for a html text element e.g. <h1 />
  */
-interface FontStyles {
-  color?: string,
-  fontFamily?: string,
-  lineHeight?: string,
-  fontWeight?: string,
-  fontSize?: number
+export interface FontStyles {
+  color?: string;
+  fontFamily?: FontType;
+  lineHeight?: string;
+  fontWeight?: string;
+  fontSize?: number;
 }
 
 /**
- * A definition for a theme 
+ * A definition for a theme.
+ * A theme is built of component styles and other, global settings, like color
  */
-interface Theme {
-  heading: FontStyles,
-  base: {
-    space: Array<number>,
-    fonts: {
-      body: FontType,
-      heading: string,
-    },
-    fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
-    fontWeights: {
-      body: 400,
-      heading: 700,
-      bold: 700,
-    },
-    lineHeights: {
-      body: 1.5,
-      heading: 1.125,
-    },
-    colors: {
-      text: string,
-      background: string,
-      primary: string,
-      secondary: string,
-      muted: string,
-    },
-    styles: {
-      root: {
-        fontFamily: string,
-        lineHeight: string,
-        fontWeight: string,
-      },
-      h1: FontStyles
-      h2: FontStyles
-      h3: FontStyles
-      h4: FontStyles
-      h5: FontStyles
-      h6: FontStyles
-      p: FontStyles
-      a: FontStyles
-      pre: FontStyles
-      code: FontStyles
-      table:FontStyles
-      th: FontStyles
-      td: FontStyles
-      img:FontStyles
-    },
-  }
+export interface Theme {
+  colors: {
+    text: string;
+    background: string;
+    primary: string;
+    secondary: string;
+    muted: string;
+  };
+  components: Record<string, ComponentStyles>;
 }
