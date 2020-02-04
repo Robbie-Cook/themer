@@ -1,7 +1,7 @@
 {
   "name": "@robbie-cook/themer",
   "version": "1.0.0",
-  "description": "Example TypeScript React component themer",
+  "description": "Theming implementation for React",
   "files": [
     "dist"
   ],

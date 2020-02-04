@@ -44,12 +44,16 @@ export interface FontStyles {
  * A theme is built of component styles and other, global settings, like color
  */
 export interface Theme {
-  colors: {
-    text: string;
-    background: string;
-    primary: string;
-    secondary: string;
-    muted: string;
+  colors?: {
+    text?: string;
+    background?: string;
+    primary?: string;
+    secondary?: string;
+    muted?: string;
   };
-  components: Record<string, ComponentStyles>;
+  components?: Record<string, ComponentStyles>;
 }
+
+// type Complete<T> = {
+//   [P in keyof Required<T>]: Pick<T, P> extends Required<Pick<T, P>> ? T[P] : (T[P] | undefined);
+// }
