@@ -1,3 +1,2 @@
-import ThemeContext from './theme/ThemeContext';
-
-export { ThemeContext };
+export * from './theme/ThemeContext';
+export * from './theme/DefaultTheme';
