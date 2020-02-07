@@ -20,10 +20,15 @@ const ThemeProvider: React.FC<Props> = props => {
   );
 };
 
-const ThemeConsumer: React.FC<{ children: React.Component }> = props => {
-  return (
-    <ThemeContext.Consumer>{(context: Theme) => props.children}</ThemeContext.Consumer>
-  );
+const ThemeConsumer: React.FC<{ children: any }> = ({ children }) => {
+  return <ThemeContext.Consumer>{children}</ThemeContext.Consumer>;
 };
 
-export { ThemeProvider, ThemeConsumer, ThemeContext };
+/**
+ * An easy hook to use for getting the context object
+ */
+const useTheme = (): Theme => {
+  return React.useContext(ThemeContext);
+}
+
+export { ThemeProvider, ThemeConsumer, ThemeContext, useTheme };

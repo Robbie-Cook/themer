@@ -17,6 +17,7 @@
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "experimentalDecorators": true,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": false,
     "sourceMap": true,
     "importHelpers": true,

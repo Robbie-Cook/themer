@@ -7,10 +7,10 @@ import { Theme } from 'types';
  */
 
 const DefaultTheme: Theme = {
-    colors: {
+  colors: {
+    primary: 'black',
       text: 'black',
       background: 'white',
-      primary: 'black',
       secondary: 'white',
       muted: 'grey',
     },
