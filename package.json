@@ -1,6 +1,6 @@
 {
   "name": "@robbie-cook/themer",
-  "version": "1.0.1-alpha1",
+  "version": "1.0.1-alpha2",
   "description": "Theming implementation for React",
   "files": [
     "dist"
