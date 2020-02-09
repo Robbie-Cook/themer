@@ -9,7 +9,7 @@
  * This code holds the structure for how themer works.
  *
  */
-export interface ComponentStyles extends FontStyles, DisplayStyles {}
+export interface ComponentStyles extends IFont, DisplayStyles {}
 
 /**
  * Display styles e.g. padding, margin, positioning
@@ -26,17 +26,31 @@ export interface DisplayStyles {
 /**
  * Mimics CSS font definition e.g. 'sans serif', 'Monospace'
  */
-type FontType = Array<string> | string;
+type FontFamily = string;
 
 /**
  * Styling for a html text element e.g. <h1 />
  */
-export interface FontStyles {
+export interface IFont {
   color?: string;
-  fontFamily?: FontType;
+  fontFamily?: FontFamily;
   lineHeight?: string;
   fontWeight?: string;
   fontSize?: number;
+}
+
+export class Font implements IFont {
+  public color?: string;
+  public fontFamily?: FontFamily;
+  public lineHeight?: string;
+  public fontWeight?: string;
+  public fontSize?: number;
+
+  constructor(fontFamily: FontFamily) {
+    this.fontFamily = fontFamily;
+  }
+
+  // TODO: add more constructors
 }
 
 /**
@@ -44,6 +58,8 @@ export interface FontStyles {
  * A theme is built of component styles and other, global settings, like color
  */
 export interface Theme {
+  // Default font
+  font?: IFont;
   colors?: {
     text?: string;
     background?: string;

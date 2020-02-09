@@ -13,9 +13,15 @@ interface Props {
   children?: any;
 }
 
+/**
+ * Provide the Theme the non-hook way.
+ */
 const ThemeProvider: React.FC<Props> = props => {
+
+  const theme = props.value ? mergeTheme(props.value, DefaultTheme) : DefaultTheme;
+
   return (
-    <ThemeContext.Provider value={props.value ? mergeTheme(props.value, DefaultTheme) : DefaultTheme}>
+    <ThemeContext.Provider value={theme}>
       {props.children}
     </ThemeContext.Provider>
   );

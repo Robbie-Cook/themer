@@ -1,4 +1,4 @@
-import { Theme } from "types";
+import { Theme, Font } from "../types";
 
 /**
  * A fallback theme to use.
@@ -7,6 +7,7 @@ import { Theme } from "types";
  */
 
 const DefaultTheme: Theme = {
+  font: new Font('Lato'),
   colors: {
     primary: "black",
     text: "black",
