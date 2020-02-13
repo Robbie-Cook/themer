@@ -2,14 +2,14 @@ import * as React from "react";
 import * as _ from 'lodash';
 
 import DefaultTheme from "./DefaultTheme";
-import { Theme } from "types";
+import { ITheme } from "types";
 
 // The actual generated context.
 // Will be exported for React.contextType
 const ThemeContext = React.createContext(DefaultTheme);
 
 interface Props {
-  value?: Theme;
+  value?: ITheme;
   children?: any;
 }
 
@@ -34,11 +34,11 @@ const ThemeConsumer: React.FC<{ children: any }> = ({ children }) => {
 /**
  * An easy hook to use for getting the context object
  */
-const useTheme = (): Theme => {
+const useTheme = (): ITheme => {
   return React.useContext(ThemeContext);
 }
 
-const mergeTheme = (newTheme: Theme, baseTheme: Theme): Theme => {
+const mergeTheme = (newTheme: ITheme, baseTheme: ITheme): ITheme => {
   return _.merge(baseTheme, newTheme);
 }
 
