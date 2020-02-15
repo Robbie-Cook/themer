@@ -88,23 +88,21 @@ export interface ITheme extends IComponentStyles {
 export class Theme extends ComponentStyles implements ITheme {
   private _components?: Record<string, IComponentStyles>;
 
-  // constructor(theme: ITheme) {
-  //   super();
-  // }
-
   constructor(component: IComponentStyles, components?: Record<string, IComponentStyles>) {
     super(component.font, component.display, component.colors);
     this._components = components;
   }
 
   /** 
-   * Get a component of the theme.
+   * Get a component of the theme (if it exists). Otherwise,
+   * get the default component styles of the theme
    */
-  getComponent?(index: string) {
-    if (this._components[index]) {
-      return this._components[index];
+  getComponent?(componentName: string) {
+    if (!this._components[componentName]) {
+      console.warn(`Component styles for ${componentName} not found in theme.`)
+      return new ComponentStyles(this.font, this.display, this.colors);
     } else {
-      console.log(this.font);
+      return this._components[componentName];
     }
   }
 }

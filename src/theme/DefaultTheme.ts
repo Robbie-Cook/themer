@@ -18,7 +18,7 @@ const defaultComponentStyles = new ComponentStyles(font, {}, colors);
  * Replaces styles that aren't defined
  */
 
-const DefaultTheme = new Theme({font, colors});
+const DefaultTheme = new Theme({font, colors}, {});
 
 // const DefaultTheme: ITheme = {
 //   font: font,
