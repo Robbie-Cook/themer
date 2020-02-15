@@ -1,3 +1,5 @@
+import * as _ from 'lodash';
+
 /**
  * File for holding generic types for this project.
  * See types.ts in Typescript compiler codes
@@ -98,11 +100,12 @@ export class Theme extends ComponentStyles implements ITheme {
    * get the default component styles of the theme
    */
   getComponent?(componentName: string) {
+    const baseComponentStyles = new ComponentStyles(this.font, this.display, this.colors);
     if (!this._components[componentName]) {
       console.warn(`Component styles for ${componentName} not found in theme.`)
-      return new ComponentStyles(this.font, this.display, this.colors);
+      return baseComponentStyles;
     } else {
-      return this._components[componentName];
+      return _.merge(baseComponentStyles, this._components[componentName]);
     }
   }
 }
