@@ -21,7 +21,7 @@ export class ComponentStyles implements IComponentStyles {
   public font?: IFont;
   public display?: IDisplayStyles; 
   public colors?: IPallette; 
-  constructor(font?: IFont, display?: IDisplayStyles, colors?: IPallette) {
+  constructor( colors?: IPallette, font?: IFont, display?: IDisplayStyles) {
     this.font = font;
     this.display = display;
     this.colors = colors;
@@ -91,7 +91,7 @@ export class Theme extends ComponentStyles implements ITheme {
   private _components?: Record<string, IComponentStyles>;
 
   constructor(component: IComponentStyles, components?: Record<string, IComponentStyles>) {
-    super(component.font, component.display, component.colors);
+    super(component.colors, component.font, component.display);
     this._components = components;
   }
 
@@ -100,7 +100,7 @@ export class Theme extends ComponentStyles implements ITheme {
    * get the default component styles of the theme
    */
   getComponent?(componentName: string) {
-    const baseComponentStyles = new ComponentStyles(this.font, this.display, this.colors);
+    const baseComponentStyles = new ComponentStyles(this.colors, this.font, this.display);
     if (!this._components[componentName]) {
       console.warn(`Component styles for ${componentName} not found in theme.`)
       return baseComponentStyles;

@@ -10,7 +10,7 @@ const colors: IPallette = {
 
 const font: IFont = new Font('Lato');
 
-const defaultComponentStyles = new ComponentStyles(font, {}, colors);
+const defaultComponentStyles = new ComponentStyles(colors, font, {});
 
 /**
  * A fallback theme to use.
@@ -18,7 +18,7 @@ const defaultComponentStyles = new ComponentStyles(font, {}, colors);
  * Replaces styles that aren't defined
  */
 
-const DefaultTheme = new Theme({font, colors}, {});
+const DefaultTheme = new Theme({colors, font}, {});
 
 // const DefaultTheme: ITheme = {
 //   font: font,
